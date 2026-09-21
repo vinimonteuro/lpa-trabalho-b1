@@ -9,4 +9,8 @@ void ExibirValoresPeso (void);
 
 float CalculoValorPeso (void);
 
+void MenuModalidade (void);
+
+float Modalidade (void);
+
 #endif

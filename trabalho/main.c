@@ -9,6 +9,7 @@ int main(){
 
 	float subtotalinicial;
 	float adicionalpeso;
+	float adicionalmodalidade;
 
     ExibirValoresDistancia ();
 
@@ -21,6 +22,12 @@ int main(){
 	adicionalpeso = (subtotalinicial * CalculoValorPeso()) - subtotalinicial;
 
 	printf ("Adicional pelo peso: %.2f\n\n", adicionalpeso);
+
+	MenuModalidade ();
+
+	adicionalmodalidade = (subtotalinicial * Modalidade ()) - subtotalinicial;
+
+	printf ("Adicional pela modalidade: %.2f\n\n", adicionalmodalidade);
 
 	return 0;
 } 
