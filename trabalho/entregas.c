@@ -13,12 +13,12 @@ void ExibirValoresDistancia (void)
         printf ("O valor será somado ao calculo de distancia x 1,20R$\n\n");
     }
 
-    float CalculoValorDistancia (void) 
+float CalculoValorDistancia (void) 
     {
         int distancia;
         float ValorD, subtotalinicial;
 
-            printf ("Qual foi a distancia percorrida? ");
+            printf ("Informe a distancia da entrega: ");
             scanf ("%d", &distancia);
 
             while (distancia <= 0)
@@ -41,4 +41,36 @@ void ExibirValoresDistancia (void)
         subtotalinicial = ValorD + (distancia * 1.20);
 
         return subtotalinicial;
+    }
+
+    void ExibirValoresPeso (void) {
+            printf ("==========Valores por peso==========\n");
+            printf ("Até 2 kg ........................0%%\n");
+            printf ("Acima de 3 kg até 5 kg ..........5%%\n");
+            printf ("Acima de 5 kg até 10 kg ........10%%\n");
+            printf ("Acima de 10 kg .................20%%\n");
+            printf ("O adicional do peso será adicionado ao subtotal inicial.\n\n");
+    }
+
+    float CalculoValorPeso (void) {
+
+        float peso;
+        float porcentagem;
+
+        printf ("Informe o peso da encomenda: ");
+        scanf ("%f", &peso);
+
+        if (peso <= 2 && peso > 0) {
+            printf ("Sem valor adicional por peso.\n");
+        } else if (peso > 2 && peso <= 5) {
+            porcentagem = 1.05;
+        } else if (peso > 5 && peso <=10) {
+            porcentagem = 1.10;
+        } else if (peso > 10) {
+            porcentagem = 1.20;
+        } else {
+            printf ("Valor invalido.");
+        }
+        
+        return porcentagem;
     }

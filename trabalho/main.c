@@ -8,12 +8,19 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");
 
 	float subtotalinicial;
+	float adicionalpeso;
 
     ExibirValoresDistancia ();
 
 	subtotalinicial = CalculoValorDistancia ();
 	
-	printf ("Subtotal inicial: %.2f", subtotalinicial);
+	printf ("Subtotal inicial: %.2f\n\n", subtotalinicial);
+
+	ExibirValoresPeso ();
+
+	adicionalpeso = (subtotalinicial * CalculoValorPeso()) - subtotalinicial;
+
+	printf ("Adicional pelo peso: %.2f\n\n", adicionalpeso);
 
 	return 0;
 } 
