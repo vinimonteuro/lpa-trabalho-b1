@@ -86,7 +86,7 @@ void MenuModalidade (void) {
     printf ("O adicional da modalidade será adicionado ao subtotal inicial.\n\n");
 }
 
-float Modalidade (void) {
+float Modalidade (int *qntecn, int *qntexp, int *qntpri) {
     int opcao;
     float porcentagemM = 1.0;
 
@@ -103,12 +103,15 @@ float Modalidade (void) {
             {
                 printf ("Modalidade escolhida: Econômica\n");
                 printf ("Sem adicional.");
+                (*qntecn)++;
             } else if (opcao == 2) {
                 printf ("Modalidade escolhida: Expressa\n");
                 porcentagemM = 1.15;
+                (*qntexp)++;
             } else if (opcao == 3) {
                 printf ("Modalidade escolhida: Prioritária\n");
                 porcentagemM = 1.30;
+                (*qntpri)++;
             } else {
                 printf ("Valor invalido.");
             }
@@ -147,7 +150,7 @@ float Tentativas (void) {
     int quantenta;
     float valor;
 
-    printf ("Gostaria de adicionar tentativas extras de entrega? Cada tentativa adiciona 4 reais ao valor total. Se sim digite quantas deseja, se não, só digite 0. ");
+    printf ("\nGostaria de adicionar tentativas extras de entrega? Cada tentativa adiciona 4 reais ao valor total. Se sim digite quantas deseja, se não, só digite 0. ");
     scanf ("%d", &quantenta);
 
     while (quantenta < 0)
@@ -159,7 +162,7 @@ float Tentativas (void) {
 
     valor = quantenta * 4.0;
 
-    printf ("Valor pelas tentativas: %.2f\n\n", valor);
+    printf ("\nValor pelas tentativas: %.2f\n\n", valor);
 
 return valor;
 }
@@ -173,16 +176,10 @@ return resultado;
 int Repeticao (void) {
 
     int opcao;
-    int quantidade;
     
     printf ("Gostaria de realizar outro pedido?\n");
     printf ("1 - Sim\n");
     printf ("0 - Não\n");
     scanf ("%d", &opcao);
-    quantidade++;
 return opcao;
-}
-
-void Resumo (void) {
-
 }

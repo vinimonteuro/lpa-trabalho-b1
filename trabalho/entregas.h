@@ -11,7 +11,7 @@ float CalculoValorPeso (void);
 
 void MenuModalidade (void);
 
-float Modalidade (void);
+float Modalidade (int *qntecn, int *qntexp, int *qntpri);
 
 float Protecao (void);
 
@@ -21,5 +21,4 @@ float ValorTotalEntrega (float a, float b, float c, float d, float e);
 
 int Repeticao (void);
 
-void Resumo (void);
 #endif
