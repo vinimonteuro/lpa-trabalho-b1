@@ -12,29 +12,38 @@ int main(){
 	float adicionalmodalidade;
 	float adicionalprotecao;
 	float adicionaltentativas;
+	float valorfinal;
+	int repetir = 1;
 
-    ExibirValoresDistancia ();
+	while (repetir == 1)
+	{
+		ExibirValoresDistancia ();
 
-	subtotalinicial = CalculoValorDistancia ();
+		subtotalinicial = CalculoValorDistancia ();
+		
+		printf ("Subtotal inicial: %.2f\n\n", subtotalinicial);
+
+		ExibirValoresPeso ();
+
+		adicionalpeso = (subtotalinicial * CalculoValorPeso()) - subtotalinicial;
+
+		printf ("Adicional pelo peso: %.2f\n\n", adicionalpeso);
+
+		MenuModalidade ();
+
+		adicionalmodalidade = (subtotalinicial * Modalidade ()) - subtotalinicial;
+
+		printf ("Adicional pela modalidade: %.2f\n\n", adicionalmodalidade);
+
+		adicionalprotecao = Protecao ();
+
+		adicionaltentativas = Tentativas ();
+
+		valorfinal = ValorTotalEntrega (subtotalinicial, adicionalpeso, adicionalmodalidade, adicionalprotecao, adicionaltentativas);
+
+		repetir = Repeticao ();
+	}
 	
-	printf ("Subtotal inicial: %.2f\n\n", subtotalinicial);
-
-	ExibirValoresPeso ();
-
-	adicionalpeso = (subtotalinicial * CalculoValorPeso()) - subtotalinicial;
-
-	printf ("Adicional pelo peso: %.2f\n\n", adicionalpeso);
-
-	MenuModalidade ();
-
-	adicionalmodalidade = (subtotalinicial * Modalidade ()) - subtotalinicial;
-
-	printf ("Adicional pela modalidade: %.2f\n\n", adicionalmodalidade);
-
-	adicionalprotecao = Protecao ();
-
-	adicionaltentativas = Tentativas ();
-
-	ValorTotalEntrega (subtotalinicial, adicionalpeso, adicionalmodalidade, adicionalprotecao, adicionaltentativas);
+	
 	return 0;
 } 

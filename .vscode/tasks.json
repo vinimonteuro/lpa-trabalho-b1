@@ -3,19 +3,16 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: gcc.exe construir ficheiro ativo",
+            "label": "Compilar Projeto Entregas",
             "command": "gcc",
             "args": [
                 "-Wall",
                 "-Wextra",
                 "-g3",
-                "${fileDirname}/*.c",
+                "${workspaceFolder}/trabalho/*.c",
                 "-o",
-                "${fileDirname}/output/${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/trabalho/output/main.exe"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
             "problemMatcher": [
                 "$gcc"
             ],

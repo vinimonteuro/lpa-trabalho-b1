@@ -17,5 +17,9 @@ float Protecao (void);
 
 float Tentativas (void);
 
-float ValorTotalEntrega (float, float, float, float, float, float);
+float ValorTotalEntrega (float a, float b, float c, float d, float e);
+
+int Repeticao (void);
+
+void Resumo (void);
 #endif

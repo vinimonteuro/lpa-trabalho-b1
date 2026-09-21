@@ -147,8 +147,15 @@ float Tentativas (void) {
     int quantenta;
     float valor;
 
-    printf ("Gostaria de adicionar tentativas extras de entrega? Se sim digite quantas deseja, se não, só digite 0. ");
+    printf ("Gostaria de adicionar tentativas extras de entrega? Cada tentativa adiciona 4 reais ao valor total. Se sim digite quantas deseja, se não, só digite 0. ");
     scanf ("%d", &quantenta);
+
+    while (quantenta < 0)
+    {
+        printf ("Quantidade invalida, digite novamente: ");
+        scanf ("%d", &quantenta);
+    }
+    
 
     valor = quantenta * 4.0;
 
@@ -160,4 +167,22 @@ return valor;
 float ValorTotalEntrega (float a, float b, float c, float d, float e) {
     float resultado = a + b + c + d + e;
     printf ("O valor total da entrega é: %.2f\n", resultado);
+return resultado;
+}
+
+int Repeticao (void) {
+
+    int opcao;
+    int quantidade;
+    
+    printf ("Gostaria de realizar outro pedido?\n");
+    printf ("1 - Sim\n");
+    printf ("0 - Não\n");
+    scanf ("%d", &opcao);
+    quantidade++;
+return opcao;
+}
+
+void Resumo (void) {
+
 }
