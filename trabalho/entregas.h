@@ -1,5 +1,5 @@
-#ifndef MATEMATICA_H
-#define MATEMATICA_H
+#ifndef ENTREGAS_H
+#define ENTREGAS_H
 
 void ExibirValoresDistancia (void);
 
@@ -13,4 +13,9 @@ void MenuModalidade (void);
 
 float Modalidade (void);
 
+float Protecao (void);
+
+float Tentativas (void);
+
+float ValorTotalEntrega (float, float, float, float, float, float);
 #endif

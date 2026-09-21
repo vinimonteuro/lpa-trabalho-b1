@@ -114,3 +114,50 @@ float Modalidade (void) {
             }
 return porcentagemM;
 }
+
+float Protecao (void) {
+    int opcao;
+    float valor;
+
+        printf ("Deseja incluir uma proteção na sua encomenda? será adicionado um valor de 7,50R$ ao subtotal.\n");
+        printf ("1 - Desejo incluir a proteção.\n");
+        printf ("0 - Não desejo incluir a proteção.\n");
+        printf ("Escolha uma opção: ");
+        scanf ("%d", &opcao);
+
+        while (opcao < 0 || opcao > 1)
+        {
+            printf ("Opção invalida, tente novamente: ");
+            scanf ("%d", &opcao);
+        }
+        
+        if (opcao == 1)
+        {
+            valor = 7.50;
+        } else if (opcao == 0) 
+        {
+            valor = 0.0;
+        }
+
+        printf ("Você escolheu a opção %d\n", opcao);
+return valor;
+}
+
+float Tentativas (void) {
+    int quantenta;
+    float valor;
+
+    printf ("Gostaria de adicionar tentativas extras de entrega? Se sim digite quantas deseja, se não, só digite 0. ");
+    scanf ("%d", &quantenta);
+
+    valor = quantenta * 4.0;
+
+    printf ("Valor pelas tentativas: %.2f\n\n", valor);
+
+return valor;
+}
+
+float ValorTotalEntrega (float a, float b, float c, float d, float e) {
+    float resultado = a + b + c + d + e;
+    printf ("O valor total da entrega é: %.2f\n", resultado);
+}

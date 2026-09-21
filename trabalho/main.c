@@ -10,6 +10,8 @@ int main(){
 	float subtotalinicial;
 	float adicionalpeso;
 	float adicionalmodalidade;
+	float adicionalprotecao;
+	float adicionaltentativas;
 
     ExibirValoresDistancia ();
 
@@ -29,5 +31,10 @@ int main(){
 
 	printf ("Adicional pela modalidade: %.2f\n\n", adicionalmodalidade);
 
+	adicionalprotecao = Protecao ();
+
+	adicionaltentativas = Tentativas ();
+
+	ValorTotalEntrega (subtotalinicial, adicionalpeso, adicionalmodalidade, adicionalprotecao, adicionaltentativas);
 	return 0;
 } 
