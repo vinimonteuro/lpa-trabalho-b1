@@ -176,10 +176,12 @@ return resultado;
 int Repeticao (void) {
 
     int opcao;
-    
-    printf ("Gostaria de realizar outro pedido?\n");
+    while (opcao > 1 || opcao < 0)
+    {
+        printf ("Gostaria de realizar outro pedido?\n");
     printf ("1 - Sim\n");
     printf ("0 - Não\n");
     scanf ("%d", &opcao);
+    }
 return opcao;
 }
